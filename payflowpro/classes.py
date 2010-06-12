@@ -181,6 +181,7 @@ class Address(PayflowProObject):
     state = Field()
     country = Field()
     companyname = Field()
+    custip = Field()
 
 class ShippingAddress(PayflowProObject):
     shiptostreet = Field(required=True)
