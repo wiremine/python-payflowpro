@@ -3,10 +3,10 @@ r"""
 ...                                 Address, Tracking, Response, CustomerInfo)
 >>> from payflowpro.client import PayflowProClient, find_classes_in_list, find_class_in_list
 
->>> PARTNER_ID = None
->>> VENDOR_ID = None
+>>> PARTNER_ID = 'Paypal'
+>>> VENDOR_ID = 'wiremine'
 >>> USERNAME = None
->>> PASSWORD = None
+>>> PASSWORD = 'twhtalmh2'
 
 >>> client = PayflowProClient(partner=PARTNER_ID,
 ...                           vendor=VENDOR_ID,

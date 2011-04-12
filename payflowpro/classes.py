@@ -204,6 +204,9 @@ class CustomerInfo(PayflowProObject):
 
 class PurchaseInfo(PayflowProObject):
     ponum = Field()
+    
+class InvoiceInfo(PayflowProObject):
+    invnum = Field()
 
 class Profile(PayflowProObject):
     profilename = Field(required=True)
@@ -273,6 +276,15 @@ class RecurringPayment(PayflowProObject):
     p_tender = Field(required=True)
     p_transtime = Field(required=True)
     p_amt = Field(required=True)    
+
+class AchPayment(PayflowProObject):
+    aba = Field(required=True)
+    acct = Field(required=True)
+    accttype = Field(required=True) # S for Savings or C for Checking
+    authtype = Field(required=True, default="WEB") 
+    custref = Field()
+    tender = Field(default="A")
+    trxtype = Field() 
 
 # Recurring Payments are a special kind of response, which may
 # comprise a number of payment records.

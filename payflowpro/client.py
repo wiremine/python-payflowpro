@@ -203,7 +203,7 @@ class PayflowProClient(object):
         params = dict(trxtype = "S")
         for item in [credit_card, amount] + extras:
             params.update(item.data)
-        return self._do_request(request_id, params)
+        return self._do_request(request_id, params)    
 
     def authorization(self, credit_card, amount, request_id=None, extras=[]):        
         params = dict(trxtype = "A")
